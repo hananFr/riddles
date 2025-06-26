@@ -20,7 +20,7 @@ export default class Riddle {
     }
     return {
       id: this.id,
-      time: Math.floor((Date.now() - start) / 1000),
+      time: +((Date.now() - start) / 1000).toFixed(2),
     };
   }
 }
