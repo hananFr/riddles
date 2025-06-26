@@ -19,6 +19,7 @@ while (turn < riddles.length){
     let riddle = new Riddle(id, name, description, correctAnswer);
     const finish =  riddle.playRiddle();
     player.time += finish.time;
+    player.time = +(player.time.toFixed(2))
     player.addToSolved(riddle.id);
     player.updateAvg();
     turn++;
